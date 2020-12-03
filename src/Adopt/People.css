@@ -1,0 +1,22 @@
+#people-section #enter-que p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+#people-section form {
+	border-bottom: 1px solid black;
+	padding-bottom: 1rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#people-section form input[type="text"] {
+	flex: 1;
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+#people-section form input[type="submit"] {
+	font-size: 1.5rem;
+}

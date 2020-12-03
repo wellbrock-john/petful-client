@@ -1,0 +1,45 @@
+/* Loading Behavior */
+
+#adopt.loading section#loading {
+	display: block;
+}
+
+#adopt.loading section#pets,
+#adopt.loading section#people {
+	display: none;
+}
+
+#adopt.loaded section#loading {
+	display: none;
+}
+
+#adopt.loading section#pets,
+#adopt.loading section#people {
+	display: none;
+}
+
+/* Layout */
+
+#adopt #pets {
+	display: flex;
+}
+
+#adopt #pets section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+#adopt #people {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#adopt #message {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+}
