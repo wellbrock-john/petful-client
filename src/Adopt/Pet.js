@@ -2,7 +2,6 @@ import "./Pet.css";
 import React from "react";
 
 export default function ({ canAdopt, handleAdopt, data }) {
-	console.log(data);
 	return (
 		<section className="pet-section">
 			{!data && <p>There are no more of this pet type left to adopt.</p>}
