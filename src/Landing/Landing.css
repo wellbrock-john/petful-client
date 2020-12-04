@@ -1,0 +1,22 @@
+#landing-btn a {
+	text-decoration: none;
+}
+
+#landing img {
+	margin-right: 0.5rem;
+}
+
+@media all and (min-width: 500px) {
+	#landing {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#landing p {
+		text-align: center;
+		width: 100%;
+		font-size: x-large;
+	}
+}

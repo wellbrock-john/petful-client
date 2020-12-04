@@ -1,4 +1,9 @@
-#people-section #enter-que p {
+#people-section {
+	display: flex;
+	flex-direction: column;
+}
+
+#people-section #enter-queue p {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
@@ -8,7 +13,8 @@
 	padding-bottom: 1rem;
 	width: 100%;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	align-items: left;
 }
 
 #people-section form input[type="text"] {
@@ -19,4 +25,37 @@
 
 #people-section form input[type="submit"] {
 	font-size: 1.5rem;
+	margin-right: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+#people-section ul {
+	list-style: decimal;
+}
+
+#current-queue {
+	margin-bottom: 0;
+}
+
+@media all and (min-width: 500px) {
+	#people-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#people-section ul {
+		list-style: decimal inside;
+		padding: 0;
+		font-size: x-large;
+	}
+
+	#people-section li {
+		margin-bottom: 1rem;
+	}
+
+	#people-section p {
+		font-size: x-large;
+	}
 }

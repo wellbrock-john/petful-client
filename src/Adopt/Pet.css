@@ -1,3 +1,8 @@
+#pets {
+	display: flex;
+	flex-direction: column;
+}
+
 .pet-section button {
 	font-size: 2rem;
 	margin-top: 1rem;
@@ -16,6 +21,23 @@
 }
 
 .pet td:first-child {
-	padding-right: 1rem;
+	padding-right: 0.5rem;
 	font-weight: 600;
+}
+
+#adopt-me-btn {
+	margin-bottom: 0.5rem;
+	padding: 8px 15px;
+}
+
+@media all and (min-width: 500px) {
+	#pets {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	#pets section {
+		margin-right: 1rem;
+	}
 }

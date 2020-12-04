@@ -2,9 +2,10 @@ import "./Pet.css";
 import React from "react";
 
 export default function ({ canAdopt, handleAdopt, data }) {
+	console.log(data);
 	return (
 		<section className="pet-section">
-			{!data && <p>There are no cats left to adopt.</p>}
+			{!data && <p>There are no more of this pet type left to adopt.</p>}
 
 			{data && (
 				<div className="pet-div">
@@ -18,22 +19,22 @@ export default function ({ canAdopt, handleAdopt, data }) {
 					<table>
 						<tbody>
 							<tr>
-								<td>Age</td>
+								<td>Age:</td>
 								<td>{data.age}</td>
 							</tr>
 
 							<tr>
-								<td>Breed</td>
+								<td>Breed:</td>
 								<td>{data.breed}</td>
 							</tr>
 
 							<tr>
-								<td>Gender</td>
+								<td>Gender:</td>
 								<td>{data.gender}</td>
 							</tr>
 
 							<tr>
-								<td>Story</td>
+								<td>Story:</td>
 								<td>{data.story}</td>
 							</tr>
 						</tbody>
@@ -41,7 +42,11 @@ export default function ({ canAdopt, handleAdopt, data }) {
 				</div>
 			)}
 
-			{data && canAdopt && <button onClick={handleAdopt}>Adopt Me!</button>}
+			{data && canAdopt && (
+				<button id="adopt-me-btn" onClick={handleAdopt}>
+					^ Adopt Me! ^
+				</button>
+			)}
 		</section>
 	);
 }

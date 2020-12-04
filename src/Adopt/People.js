@@ -12,17 +12,17 @@ export default function ({ handleNewPerson, currentPerson, people }) {
 	return (
 		<section id="people-section">
 			{!currentPerson && (
-				<div id="enter-que">
-					<p>Enter the que to adopt your new pet!</p>
+				<div id="enter-queue">
+					<p>Take your spot in the queue to adopt your new pet!</p>
 
 					<form onSubmit={handleSubmit}>
 						<input required id="name" type="text" placeholder="Name" />
-						<input type="submit" value="Enter que" />
+						<input type="submit" value="Enter queue" />
 					</form>
 				</div>
 			)}
 
-			<p>Currently in que:</p>
+			<p id="current-queue">Currently in queue:</p>
 
 			<ul>
 				{people.map((person, index) => {

@@ -19,8 +19,6 @@ export default class Adopt extends React.Component {
 		dog: {},
 		people: [],
 	};
-
-	// Load initial data.
 	componentDidMount() {
 		const getPets = fetch(`${API_URL}/pets`).then((response) =>
 			response.json()
@@ -41,15 +39,10 @@ export default class Adopt extends React.Component {
 		});
 	}
 
-	// ---------------------------------------------
-	// People-Related Functions
-
 	handleNewPerson = (person) => {
 		this.setState({ currentPerson: person });
 		this.addToLine(person);
 
-		// For demo purposes, start cycling the queue so that
-		// the new person gets a chance to adopt.
 		this.beginAutomaticAdopting();
 	};
 
@@ -69,20 +62,13 @@ export default class Adopt extends React.Component {
 			});
 	};
 
-	// ---------------------------------------------
-	// Adoption-Related Functions
-
 	handleAdopt = (type) => {
 		this.adopt(type);
 
-		// Since adoption happened manually, we can assume that
-		// the person who adopted was the current user.
 		this.setState({ canAdopt: false, currentPerson: null });
 	};
 
 	adopt = (type) => {
-		// Don't attempt to adopt if there are no more pets
-		// remaining.
 		if (!this.state[type]) {
 			return;
 		}
@@ -116,8 +102,6 @@ export default class Adopt extends React.Component {
 			const type = ["cat", "dog"][Math.round(Math.random())];
 			this.adopt(type);
 
-			// Add someone to the line to replace the person who
-			// adopted, so the queue doesn't empty out.
 			this.addToLine(faker.name.findName());
 		}, 3000);
 
@@ -128,8 +112,6 @@ export default class Adopt extends React.Component {
 			}
 		});
 	};
-
-	// ---------------------------------------------
 
 	render() {
 		return (
