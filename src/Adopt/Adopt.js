@@ -4,9 +4,8 @@ import faker from "faker";
 
 import People from "./People";
 import Pet from "./Pet";
-import REACT_APP_API_URL from "../config";
 
-const API_URL = REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default class Adopt extends React.Component {
 	state = {
