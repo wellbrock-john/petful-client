@@ -2,6 +2,8 @@
 
 ## Petful is a demo application to showcase full stack skills I have acquired through Thinkful's Engineering Immersion program. It allows a user to enter a waiting queue by simply providing their name. For demo purposes, the queue does not change unless a user has entered a name. When that happens, the person who is up next in the queue will 'adopt' a pet. That's it! Simple and straightforward.
 
+[Live Site](https://petful-client-mu.vercel.app/)
+
 [Backend Repo](https://github.com/wellbrock-john/petful-server)
 
 ## [Frontend Repo](https://github.com/wellbrock-john/petful-client)
