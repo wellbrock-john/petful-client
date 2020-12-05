@@ -41,12 +41,12 @@ export default class Adopt extends React.Component {
 
 	handleNewPerson = (person) => {
 		this.setState({ currentPerson: person });
-		this.addToLine(person);
+		this.addToQueue(person);
 
-		this.beginAutomaticAdopting();
+		this.startAutomation();
 	};
 
-	addToLine = (name) => {
+	addToQueue = (name) => {
 		const config = {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -97,12 +97,12 @@ export default class Adopt extends React.Component {
 			});
 	};
 
-	beginAutomaticAdopting = () => {
+	startAutomation = () => {
 		const adoptionTimer = setInterval(() => {
 			const type = ["cat", "dog"][Math.round(Math.random())];
 			this.adopt(type);
 
-			this.addToLine(faker.name.findName());
+			this.addToQueue(faker.name.findName());
 		}, 3000);
 
 		const stop = setInterval(() => {

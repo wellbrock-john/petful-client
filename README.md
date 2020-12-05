@@ -1,70 +1,29 @@
 # Petful Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Petful is a demo application to showcase full stack skills I have acquired through Thinkful's Engineering Immersion program. It allows a user to enter a waiting queue by simply providing their name. For demo purposes, the queue does not change unless a user has entered a name. When that happens, the person who is up next in the queue will 'adopt' a pet. That's it! Simple and straightforward.
 
-## Available Scripts
+[Backend Repo](https://github.com/wellbrock-john/petful-server)
 
-In the project directory, you can run:
+## [Frontend Repo](https://github.com/wellbrock-john/petful-client)
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Landing Page
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- - To get started from the landing page, simply click the 'start' button.
 
-### `npm test`
+![petful-client-mu vercel app_](https://user-images.githubusercontent.com/68931297/101229554-05f99300-365e-11eb-8f9b-6fe8a7dc5317.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Adoption Page
 
-### `npm run build`
+- - On the adoption page simply enter a name and then click 'Enter queue' to be placed in the queue.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![petful-client-mu vercel app_ (1)](https://user-images.githubusercontent.com/68931297/101229634-76a0af80-365e-11eb-86bf-b303b72d1a5d.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- - Your name will appear in the queue and the automated adoption will begin and continue until it is your turn to adopt. Then you will have the option to choose between one of the two pets on the screen.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![petful-client-mu vercel app_ (3)](https://user-images.githubusercontent.com/68931297/101229816-4574af00-365f-11eb-957e-b0ead6795d1c.png)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Created by @wellbrock-john
