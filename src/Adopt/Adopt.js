@@ -156,7 +156,7 @@ export default class Adopt extends React.Component {
 				<p id="message">
 					{this.state.message}{" "}
 					{this.state.reQueueButton === true && (
-						<form onSubmit={this.setReQueueButton}>
+						<form id="re-queue-btn" onSubmit={this.setReQueueButton}>
 							<input type="submit" value="Start Again!" />
 						</form>
 					)}

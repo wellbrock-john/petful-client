@@ -39,6 +39,12 @@
 	text-align: center;
 }
 
+#re-queue-btn {
+	height: 2rem;
+	width: 65%;
+	margin-top: 1rem;
+}
+
 @media all and (min-width: 500px) {
 	#pets {
 		flex: 1;
