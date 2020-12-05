@@ -14,6 +14,7 @@ export default class Adopt extends React.Component {
 
 		canAdopt: false,
 		currentPerson: null,
+		reQueueButton: false,
 
 		cat: {},
 		dog: {},
@@ -38,6 +39,12 @@ export default class Adopt extends React.Component {
 			});
 		});
 	}
+
+	setReQueueButton = () => {
+		setInterval(() => {
+			this.setState({ currentPerson: false });
+		}, 3000);
+	};
 
 	handleNewPerson = (person) => {
 		this.setState({ currentPerson: person });
@@ -65,7 +72,10 @@ export default class Adopt extends React.Component {
 	handleAdopt = (type) => {
 		this.adopt(type);
 
-		this.setState({ canAdopt: false, currentPerson: null });
+		this.setState({
+			canAdopt: false,
+			currentPerson: null,
+		});
 	};
 
 	adopt = (type) => {
@@ -82,6 +92,7 @@ export default class Adopt extends React.Component {
 		fetch(`${API_URL}/pets`, config)
 			.then((response) => response.json())
 			.then((data) => {
+				// eslint-disable-next-line
 				const [removed, ...people] = this.state.people;
 				const canAdopt = people[0] === this.state.currentPerson;
 
@@ -98,6 +109,8 @@ export default class Adopt extends React.Component {
 	};
 
 	startAutomation = () => {
+		this.setState({ reQueueButton: false });
+
 		const adoptionTimer = setInterval(() => {
 			const type = ["cat", "dog"][Math.round(Math.random())];
 			this.adopt(type);
@@ -126,6 +139,7 @@ export default class Adopt extends React.Component {
 						canAdopt={this.state.canAdopt}
 						handleAdopt={() => {
 							this.adopt("cat");
+							this.setState({ reQueueButton: true });
 						}}
 					/>
 
@@ -134,11 +148,19 @@ export default class Adopt extends React.Component {
 						canAdopt={this.state.canAdopt}
 						handleAdopt={() => {
 							this.adopt("dog");
+							this.setState({ reQueueButton: true });
 						}}
 					/>
 				</section>
 
-				<p id="message">{this.state.message}</p>
+				<p id="message">
+					{this.state.message}{" "}
+					{this.state.reQueueButton === true && (
+						<form onSubmit={this.setReQueueButton}>
+							<input type="submit" value="Start Again!" />
+						</form>
+					)}
+				</p>
 
 				<People
 					currentPerson={this.state.currentPerson}

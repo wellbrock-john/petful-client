@@ -17,7 +17,7 @@ export default function ({ handleNewPerson, currentPerson, people }) {
 
 					<form onSubmit={handleSubmit}>
 						<input required id="name" type="text" placeholder="Name" />
-						<input type="submit" value="Enter queue" />
+						<input type="submit" value="Enter Queue" />
 					</form>
 				</div>
 			)}
